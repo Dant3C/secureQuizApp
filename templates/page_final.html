@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% set active_page = "page3" %}
+
+{% block title %}page3{% endblock %}
+
+{% block content %}
+<h1>QuizApp_v2</h1>
+<p>more text Answers:<br>
+{{ finalAnswer }}
+your final score is {{ finalScore }}/3
+</p>
+
+{% endblock %}

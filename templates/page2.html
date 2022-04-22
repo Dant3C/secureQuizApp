@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% set active_page = "page2" %}
+
+{% block title %}page2{% endblock %}
+
+{% block content %}
+<h1>QuizApp_v2</h1>
+<p>more text page2</p>
+<form action="/p3" method="POST">
+  <label for="q2">Question 2</label><br>
+  <input type="text" id="q2" name="q2">
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
