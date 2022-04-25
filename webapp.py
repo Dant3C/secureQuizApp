@@ -23,7 +23,6 @@ def render_page2():
     print(session["q1"])
 
     return render_template('page2.html')
-    
 
 @app.route('/p3',methods=['GET','POST'])
 def render_page3():
@@ -36,7 +35,7 @@ def render_page_final():
     session["q3"]=request.form["q3"]
     answerFinal = ''
     i = 0
-    if session["q1"] == 'a':
+    if session["q1"] == '2':
         answerFinal = answerFinal + 'You got question 1 correct' + Markup('<br>')
         i += 1
     else:
@@ -53,7 +52,8 @@ def render_page_final():
         i += 1
     else:
         answerFinal = answerFinal + 'You got question 3 wrong' + Markup('<br>')
-
+def last_score():
+    
     return render_template('page_final.html', finalAnswer = answerFinal, finalScore = str(i))
 if __name__=="__main__":
     app.run(debug=True)
