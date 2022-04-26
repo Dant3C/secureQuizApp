@@ -41,18 +41,17 @@ def render_page_final():
     else:
         answerFinal = answerFinal + 'You got question 1 wrong' + Markup('<br>')
         
-    if session["q2"] == 'b':
+    if session["q2"] == '7' or session["q2"] == 'Seven':
         answerFinal = answerFinal + 'You got question 2 correct' + Markup('<br>')
         i += 1
     else:
         answerFinal = answerFinal + 'You got question 2 wrong' + Markup('<br>')
         
-    if session["q3"] == 'c':
+    if session["q3"] == '9':
         answerFinal = answerFinal + 'You got question 3 correct' + Markup('<br>')
         i += 1
     else:
         answerFinal = answerFinal + 'You got question 3 wrong' + Markup('<br>')
-def last_score():
     
     return render_template('page_final.html', finalAnswer = answerFinal, finalScore = str(i))
 if __name__=="__main__":
